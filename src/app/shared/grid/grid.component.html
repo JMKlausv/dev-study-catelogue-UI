@@ -1,0 +1,19 @@
+
+
+
+<ejs-grid 
+[dataSource]='data' 
+[allowFiltering]='true' 
+[filterSettings]='filterOptions' 
+height='273px'>
+    <e-columns>
+        <e-column  *ngFor="let c of columnData"
+        [field]='c.field' 
+        [headerText]='c.headerText' 
+        textAlign='Right' 
+        width=100>
+        <e-column></e-column>
+    </e-column>
+    
+    </e-columns>
+</ejs-grid>

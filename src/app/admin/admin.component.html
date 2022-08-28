@@ -1,0 +1,48 @@
+
+<ejs-sidebar #dockBar id="dockSidebar" [enableDock]='enableDock' [width]='width' [dockSize]='dockSize'>
+    <div class="dock">
+        <ul>
+            <li class="sidebar-item" id="toggle" (click)="toggleClick()">
+                <span class="e-icons expand"></span>
+                <span class="e-text" title="menu">Menu</span>
+            </li>
+            <li class="sidebar-item">
+                <span class="e-icons dashboard"></span>
+                <span class="e-text" title="dashboard">
+                    <a routerLink="dashboard">Dashboard</a> 
+                </span>
+                
+            </li>
+            <li class="sidebar-item">
+                <span class="e-icons language"></span>
+                <span class="e-text" title="language">
+                   <a routerLink="language">Language</a> 
+                </span>
+            </li>
+            <li class="sidebar-item">
+                <span class="e-icons framework"></span>
+                <span class="e-text" title="framework">
+                    <a routerLink="">FrameWork</a> 
+                </span>
+            </li>
+            <li class="sidebar-item">
+                <span class="e-icons course"></span>
+                <span class="e-text" title="course">
+                    <a routerLink="">Course</a> 
+                </span>
+            </li>
+            <li class="sidebar-item">
+                <span class="e-icons users"></span>
+                <span class="e-text" title="users">
+                    <a routerLink="">Users</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</ejs-sidebar>
+<div id="main-content container-fluid col-md-12 ">
+    <div class="title">Main content</div>
+    <router-outlet></router-outlet>
+</div>
+
+<!--end of main content declaration -->
