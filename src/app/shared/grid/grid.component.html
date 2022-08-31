@@ -1,19 +1,32 @@
 
 
-
-<ejs-grid 
+<button class="add-btn" (click)="onAdd($event)">
+    <span class="e-icons e-add"></span>
+    <span class="e-text" title="add" >Add</span>
+</button>
+<ejs-grid #grid
 [dataSource]='data' 
+[allowPaging]="true"  
+[editSettings]='editSettings' 
+[pageSettings]='pageSettings'  
+[selectionSettings]='selectionOptions'
 [allowFiltering]='true' 
 [filterSettings]='filterOptions' 
+[toolbar]='toolbarOptions' 
 height='273px'>
     <e-columns>
         <e-column  *ngFor="let c of columnData"
         [field]='c.field' 
         [headerText]='c.headerText' 
-        textAlign='Right' 
+        textAlign='center' 
         width=100>
-        <e-column></e-column>
+        
     </e-column>
-    
+    <!-- <e-column 
+    headerText='commands' 
+    width=100
+    [commands]='commands'
+    textAlign="center">
+    </e-column> -->
     </e-columns>
 </ejs-grid>

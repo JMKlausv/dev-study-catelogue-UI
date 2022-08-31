@@ -1,7 +1,12 @@
-<p>language-list works!</p>
-<div>
+
+
+<div class="grid">
     <app-grid 
     [data]="data" 
-    [columnData]="columnData">
+    [columnData]="columnData"
+    (add)="addLanguage()"
+    (delete)="deleteLanguage()"
+    (edit)="editLanguage()"
+    >
 </app-grid>
 </div>

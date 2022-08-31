@@ -2,6 +2,7 @@
 <ejs-sidebar #dockBar id="dockSidebar" [enableDock]='enableDock' [width]='width' [dockSize]='dockSize'>
     <div class="dock">
         <ul>
+           
             <li class="sidebar-item" id="toggle" (click)="toggleClick()">
                 <span class="e-icons expand"></span>
                 <span class="e-text" title="menu">Menu</span>
@@ -9,39 +10,42 @@
             <li class="sidebar-item">
                 <span class="e-icons dashboard"></span>
                 <span class="e-text" title="dashboard">
-                    <a routerLink="dashboard">Dashboard</a> 
+                    <a routerLink="dashboard" routerLinkActive="active">Dashboard</a> 
                 </span>
                 
             </li>
             <li class="sidebar-item">
                 <span class="e-icons language"></span>
                 <span class="e-text" title="language">
-                   <a routerLink="language">Language</a> 
+                   <a routerLink="language" routerLinkActive="active">Language</a> 
                 </span>
             </li>
             <li class="sidebar-item">
                 <span class="e-icons framework"></span>
                 <span class="e-text" title="framework">
-                    <a routerLink="">FrameWork</a> 
+                    <a routerLink="" routerLinkActive="active">FrameWork</a> 
                 </span>
             </li>
             <li class="sidebar-item">
                 <span class="e-icons course"></span>
                 <span class="e-text" title="course">
-                    <a routerLink="">Course</a> 
+                    <a routerLink="" routerLinkActive="active">Course</a> 
                 </span>
             </li>
             <li class="sidebar-item">
                 <span class="e-icons users"></span>
                 <span class="e-text" title="users">
-                    <a routerLink="">Users</a>
+                    <a routerLink="" routerLinkActive="active">Users</a>
                 </span>
             </li>
         </ul>
     </div>
 </ejs-sidebar>
 <div id="main-content container-fluid col-md-12 ">
-    <div class="title">Main content</div>
+    <div class="navbar">
+        .
+    </div>
+    
     <router-outlet></router-outlet>
 </div>
 

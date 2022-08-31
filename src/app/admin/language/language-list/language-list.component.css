@@ -1,0 +1,20 @@
+.grid{
+    padding: 1%;
+}
+.e-icons{
+    color:#3EA1EC;
+}
+.e-add::before{
+    content:'\e7f9';
+}
+.add-btn{
+    background-color: #171941;
+    margin-left: 90%;
+    border: 2px solid #3EA1EC;
+    content: '\eddc';
+    color: #3EA1EC;
+    padding: 4px 10px;
+    width: fit-content;
+    margin-top: 1%;
+    
+}

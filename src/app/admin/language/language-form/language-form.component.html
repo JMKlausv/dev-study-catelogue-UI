@@ -1,0 +1,57 @@
+<div id="container" >
+    <h4 class="title">Add New Language</h4>
+
+    <form [formGroup]="form1" (ngSubmit)="addLanguage()" novalidate >
+        <div class="form-group">
+            <div class="lable">language information</div>
+            <div class="form-content">
+                <div>
+                    <label for="name">
+                        Language Name 
+                        <span style="color: red;"
+                        *ngIf="languageName.hasError('required') 
+                         && (languageName?.touched || languageName?.dirty)">
+                         *
+                        </span> 
+                    </label>
+                    <input  [ngClass]="{'error': !languageName.valid  && (languageName.touched || languageName.dirty) }"
+                    type="text" i  formControlName="languageName">
+                    <small  class="error-text"
+                      *ngIf="languageName.hasError('required') 
+                       && (languageName?.touched || languageName?.dirty)">
+                       language name is requiered
+                    </small>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn-submit" [disabled]="!languageName.valid || loading">
+                        <span class="e-icons submit"></span>
+                         submit 
+                    </button>
+                    <button type="reset" class="btn-cancel" (click)="onCancel()">
+                        <span class="e-icons cancel"></span> 
+                        cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+   
+</div>
+<!-- <div #container class='root-container'></div>
+<ejs-dialog id='dialog' #template
+ showCloseIcon='true' 
+ [position]="position" 
+ [visible]="showDialogue"
+ [height]='height' 
+ [target]='targetElement' 
+ width='435px'>
+      <ng-template #content>
+          <div class="dialogContent">
+              <span class="dialogText">{{message}}</span>
+          </div>
+      </ng-template>
+      <ng-template #header>
+          <div title="Error" class="e-icon-settings dlg-template"> Error </div>
+      </ng-template>
+    </ejs-dialog> -->
+

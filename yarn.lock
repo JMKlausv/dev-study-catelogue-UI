@@ -1529,6 +1529,16 @@
     "@syncfusion/ej2-grids" "20.2.45"
     tslib "^2.3.0"
 
+"@syncfusion/ej2-angular-layouts@^20.2.45":
+  version "20.2.45"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-layouts/-/ej2-angular-layouts-20.2.45.tgz#d68b7599cf7def6f51b52e903c53b6417146f9b0"
+  integrity sha512-00K6LNIY0rYCgqFpEKNfefVvEECpnLkvjSXLpmNoRgeOQGbcQelPg+EoqIom/BtnWLs0jg98eNCL+2exSjNIZg==
+  dependencies:
+    "@syncfusion/ej2-angular-base" "~20.2.45"
+    "@syncfusion/ej2-base" "~20.2.45"
+    "@syncfusion/ej2-layouts" "20.2.45"
+    tslib "^2.3.0"
+
 "@syncfusion/ej2-angular-navigations@^20.2.45":
   version "20.2.45"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-navigations/-/ej2-angular-navigations-20.2.45.tgz#b4e662406eb4402edcc8436ad83b4a97c80a0e98"
@@ -1537,6 +1547,16 @@
     "@syncfusion/ej2-angular-base" "~20.2.45"
     "@syncfusion/ej2-base" "~20.2.45"
     "@syncfusion/ej2-navigations" "20.2.45"
+    tslib "^2.3.0"
+
+"@syncfusion/ej2-angular-popups@^20.2.45":
+  version "20.2.45"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-popups/-/ej2-angular-popups-20.2.45.tgz#6da7fe4771600ac20ae1d39eb160015160406e6e"
+  integrity sha512-cmkJ/t6wGW2K+EEyijGTp4ZZDPg6L5lkg1FbVGMHxuUEqEsYEaID4mMDjwncMMmzcntaQ09KItxh1m9/H/I9yQ==
+  dependencies:
+    "@syncfusion/ej2-angular-base" "~20.2.45"
+    "@syncfusion/ej2-base" "~20.2.45"
+    "@syncfusion/ej2-popups" "20.2.45"
     tslib "^2.3.0"
 
 "@syncfusion/ej2-base@~20.2.45":
@@ -1638,6 +1658,13 @@
     "@syncfusion/ej2-popups" "~20.2.45"
     "@syncfusion/ej2-splitbuttons" "~20.2.45"
 
+"@syncfusion/ej2-layouts@20.2.45":
+  version "20.2.45"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-layouts/-/ej2-layouts-20.2.45.tgz#074458f2f55640ebc6737219f427d0183dd1cb62"
+  integrity sha512-nT+gfeXnXR58ae3d9XSvEvCOxgmDJHDbR2y0kwrBiI2FyuC0Uye9jEQ4SgV8aV0QlGhZ79xNOu9P984j7Z2RMg==
+  dependencies:
+    "@syncfusion/ej2-base" "~20.2.45"
+
 "@syncfusion/ej2-lists@~20.2.45":
   version "20.2.45"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-lists/-/ej2-lists-20.2.45.tgz#7bb6ff8dc2edc5792f5a3f0ac2e8b1a95451835a"
@@ -1666,7 +1693,7 @@
   dependencies:
     "@syncfusion/ej2-compression" "~20.2.45"
 
-"@syncfusion/ej2-popups@~20.2.45":
+"@syncfusion/ej2-popups@20.2.45", "@syncfusion/ej2-popups@~20.2.45":
   version "20.2.45"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-popups/-/ej2-popups-20.2.45.tgz#6a8a6df2a3026cb90e6d6fb7dcae23dc331262ca"
   integrity sha512-pT8yJl4UpUDF7E0cR45hMi+Bwatk40JMTBEtCZgYQyj/da/K8LcMbMSY0ld1tcpSJDUGSorJwGvamRLwKCHNVA==

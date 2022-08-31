@@ -12,10 +12,14 @@ body{
     height: 100%;
     background-color: #2d323e;
  }
-.title {
+.navbar {
     text-align: center;
     font-size: 20px;
-    padding: 15px;
+    height: 3%;
+    background-color:white;
+    color:black;
+    border-bottom: 1px solid rgb(224, 221, 221);
+
 }
 
 .sub-title {
@@ -135,7 +139,7 @@ span.e-icons {
 }
 
 #dockSidebar.e-sidebar {
-    background: #2d323e;
+    background: #171941;
     overflow: hidden;
 }
 /* end of sidebar styles */

@@ -11,5 +11,8 @@ export class ApiService {
   getAll(url:string){
     return this.http.get(API_URL+url);
   }
+  add(url:string, data:any){
+    return this.http.post(API_URL+url,data)
+  }
 
 }
