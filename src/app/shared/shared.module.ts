@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GridComponent } from './grid/grid.component';
 import { FilterService, GridModule, PageService, SearchService, ToolbarService } from '@syncfusion/ej2-angular-grids';
 import { HttpClientModule} from '@angular/common/http';
 import { MultiSelectModule, CheckBoxSelectionService,DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
 import { CheckBoxModule } from '@syncfusion/ej2-angular-buttons';
 import { ApiService } from './api.service';
+import { ActionButtonGroupComponent } from './action-button-group/action-button-group.component';
+import { AppGridComponent } from './app-grid/app-grid.component';
 
 
 @NgModule({
   declarations: [
-    GridComponent
+    ActionButtonGroupComponent,
+    AppGridComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { ApiService } from './api.service';
      CheckBoxSelectionService
     ],
   exports:[
-    GridComponent,
+    AppGridComponent,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

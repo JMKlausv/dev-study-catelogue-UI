@@ -1,12 +1,14 @@
 
-
-<div class="grid">
-    <app-grid 
-    [data]="data" 
-    [columnData]="columnData"
-    (add)="addLanguage()"
-    (delete)="deleteLanguage()"
-    (edit)="editLanguage()"
-    >
-</app-grid>
+<div id="container">
+    <div class="grid">
+        <app-grid 
+        [data]="data" 
+        [columnData]="columnData"
+        (add)="addLanguage()"
+        (delete)="deleteLanguage($event)"
+        (edit)="editLanguage($event)"
+        >
+    </app-grid>
+    </div>
 </div>
+

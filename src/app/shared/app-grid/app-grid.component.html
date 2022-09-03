@@ -1,18 +1,21 @@
+<app-action-button-group
+(add)="onAdd($event)"
+(edit)="onEdit($event)"
+(delete)="onDelete($event)"
+>    
+</app-action-button-group>
 
-
-<button class="add-btn" (click)="onAdd($event)">
-    <span class="e-icons e-add"></span>
-    <span class="e-text" title="add" >Add</span>
-</button>
 <ejs-grid #grid
 [dataSource]='data' 
 [allowPaging]="true"  
 [editSettings]='editSettings' 
 [pageSettings]='pageSettings'  
+
 [selectionSettings]='selectionOptions'
 [allowFiltering]='true' 
 [filterSettings]='filterOptions' 
 [toolbar]='toolbarOptions' 
+(rowSelected)='rowSelected($event)'
 height='273px'>
     <e-columns>
         <e-column  *ngFor="let c of columnData"
@@ -22,11 +25,5 @@ height='273px'>
         width=100>
         
     </e-column>
-    <!-- <e-column 
-    headerText='commands' 
-    width=100
-    [commands]='commands'
-    textAlign="center">
-    </e-column> -->
     </e-columns>
 </ejs-grid>

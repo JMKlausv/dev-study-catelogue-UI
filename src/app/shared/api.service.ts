@@ -8,11 +8,17 @@ export class ApiService {
 
   constructor( private http:HttpClient) { }
 
-  getAll(url:string){
+  get(url:string){
     return this.http.get(API_URL+url);
   }
   add(url:string, data:any){
     return this.http.post(API_URL+url,data)
+  }
+  delete(url:string){
+    return this.http.delete(API_URL+url);
+  }
+  edit(url:string, data:any){
+    return this.http.put(API_URL+url,data);
   }
 
 }

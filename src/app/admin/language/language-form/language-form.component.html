@@ -1,7 +1,7 @@
 <div id="container" >
-    <h4 class="title">Add New Language</h4>
+    <h4 class="title">{{title}}</h4>
 
-    <form [formGroup]="form1" (ngSubmit)="addLanguage()" novalidate >
+    <form [formGroup]="form1" (ngSubmit)="save()" novalidate >
         <div class="form-group">
             <div class="lable">language information</div>
             <div class="form-content">
@@ -9,21 +9,21 @@
                     <label for="name">
                         Language Name 
                         <span style="color: red;"
-                        *ngIf="languageName.hasError('required') 
-                         && (languageName?.touched || languageName?.dirty)">
+                        *ngIf="name.hasError('required') 
+                         && (name?.touched || name?.dirty)">
                          *
                         </span> 
                     </label>
-                    <input  [ngClass]="{'error': !languageName.valid  && (languageName.touched || languageName.dirty) }"
-                    type="text" i  formControlName="languageName">
+                    <input  [ngClass]="{'error': !name.valid  && (name.touched || name.dirty) }"
+                    type="text" i  formControlName="name">
                     <small  class="error-text"
-                      *ngIf="languageName.hasError('required') 
-                       && (languageName?.touched || languageName?.dirty)">
+                      *ngIf="name.hasError('required') 
+                       && (name?.touched || name?.dirty)">
                        language name is requiered
                     </small>
                 </div>
                 <div class="btn-group">
-                    <button type="submit" class="btn-submit" [disabled]="!languageName.valid || loading">
+                    <button type="submit" class="btn-submit" [disabled]="!name.valid || loading">
                         <span class="e-icons submit"></span>
                          submit 
                     </button>

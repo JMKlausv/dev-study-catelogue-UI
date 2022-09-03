@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { CommandModel, EditSettingsModel, FilterSettingsModel, PageSettingsModel, SelectionSettingsModel, ToolbarItems } from '@syncfusion/ej2-angular-grids';
+import { EditSettingsModel, FilterSettingsModel, GridComponent, PageSettingsModel, RowDeselectEventArgs, RowSelectEventArgs, SelectionSettingsModel, ToolbarItems } from '@syncfusion/ej2-angular-grids';
 
 @Component({
   selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.css']
+  templateUrl: './app-grid.component.html',
+  styleUrls: ['./app-grid.component.css']
 })
-export class GridComponent implements OnInit {
+export class AppGridComponent implements OnInit {
 
   constructor() { }
   @Input()
@@ -23,11 +23,10 @@ export class GridComponent implements OnInit {
   public grid! : GridComponent ;
   public editSettings!: EditSettingsModel;
   public pageSettings!: PageSettingsModel;
-  public commands!: CommandModel[];
   public filterOptions!: FilterSettingsModel
   public toolbarOptions!: ToolbarItems[];
   public selectionOptions!: SelectionSettingsModel;
-  
+  public selectedRowData!:any;
   ngOnInit(): void {
     this.filterOptions = {
       type: 'Menu'
@@ -44,20 +43,31 @@ export class GridComponent implements OnInit {
 
   }
 
-  // onCommandClick(args: any) {
-  //   if (args.target.title == 'Delete') {
-  //     this.delete.emit(args.rowData);
-  //   } else if (args.target.title == 'Edit') {
-  //     this.edit.emit(args.rowData);
-  //   }
-  // }
 onAdd(event: any){
 this.add.emit(event);
 }
-onUpdate(){
+onEdit(event:any){
+  var index :number[]= this.grid.getSelectedRowIndexes();
+  if(index.length == 0){
+    alert("please select an item to delete");
+  }else{
+    
+    this.edit.emit(this.selectedRowData);
+  }
 
 }
-onDelete(){
-
+onDelete(event:any){
+  var index :number[]= this.grid.getSelectedRowIndexes();
+  if(index.length == 0){
+    alert("please select an item to delete");
+  }
+  else{
+    this.delete.emit(this.selectedRowData.id);
+  }
 }
+
+rowSelected(args: RowSelectEventArgs) {
+this.selectedRowData = args.data;
+}
+
 }

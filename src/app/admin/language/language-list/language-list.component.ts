@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { createSpinner, hideSpinner, showSpinner } from '@syncfusion/ej2-angular-popups';
 import { map } from 'rxjs';
 import { Language } from 'src/app/models/language.interface';
 import { ApiService } from 'src/app/shared/api.service';
@@ -22,22 +23,43 @@ export class LanguageListComponent implements OnInit {
   ngOnInit(): void {
    this.fetchLanguages();
   }
-
+  
+  ngAfterViewInit(){
+    createSpinner({
+      target: document.getElementById('container')!
+    });
+  }
 
   fetchLanguages(){
-    this.apiService.getAll("Language").subscribe(res=>{
+    this.apiService.get("Language").subscribe(res=>{
       this.data = res as Language[];
-      console.log(this.data[0].id)
     })
   }
   addLanguage(){
-    this.router.navigate(['/admin/language/new']);
+    this.router.navigate(['/admin/language/form']);
   }
-  editLanguage(){
-
-  }
-  deleteLanguage(){
+  editLanguage(language:any){
     
+    this.router.navigate(['/admin/language/form'],{state:language});
+  }
+  deleteLanguage(id:number){
+
+    
+
+    if(window.confirm("Are You want to delete the selected language")){
+      showSpinner(document.getElementById('container')!);
+      this.apiService.delete("Language/"+id).subscribe(
+        res=>{
+        this.ngOnInit();
+
+        hideSpinner(document.getElementById('container')!);
+      },
+      error=>{
+        console.log(error.message)
+        hideSpinner(document.getElementById('container')!);
+      }
+      );
+    }
   }
 
 }

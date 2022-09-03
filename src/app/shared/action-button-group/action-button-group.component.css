@@ -1,0 +1,44 @@
+.e-add::before{
+    content:'\e7f9';
+    color:#3EA1EC;
+  
+}
+.e-edit::before{
+    content:'\e7a3';
+    color: #e5cf0d;
+}
+.e-delete::before{
+    content:'\e84e';
+    color: #FB0066;
+}
+.add-btn{
+    background-color: #171941;
+    border: 2px solid #3EA1EC;
+    content: '\eddc';
+    color: #3EA1EC;
+}
+.edit-btn{
+    background-color: #171941;
+    border: 2px solid #e5cf0d;
+    content: '\eddc';
+    color: #e5cf0d;
+}
+.delete-btn{
+    background-color: #171941;
+    border: 2px solid #FB0066;
+    content: '\eddc';
+    color: #FB0066;
+
+}
+.btn{
+    padding: 4px 10px;
+    width: fit-content;
+    margin-top: 1%;
+    margin-left: 1.5%;
+}
+
+.action-btnGroup{
+    display: flex;
+    margin-left: 70%;
+    margin-bottom:1%;
+}
