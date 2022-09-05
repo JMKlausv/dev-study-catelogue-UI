@@ -47,7 +47,7 @@ get name() : FormControl{
 
     command = this.apiService.edit('Language/', this.form1.value);
    }else{
-command = this.apiService.add('Language/', this.form1.value)
+command = this.apiService.post('Language/', this.form1.value)
    }
       command.subscribe(
         res=>{

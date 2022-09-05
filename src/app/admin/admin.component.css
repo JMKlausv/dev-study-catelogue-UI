@@ -139,7 +139,8 @@ span.e-icons {
 }
 
 #dockSidebar.e-sidebar {
-    background: #171941;
+    /* background: #171941; */
+    background-color: #201A30;;
     overflow: hidden;
 }
 /* end of sidebar styles */

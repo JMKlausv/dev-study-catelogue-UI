@@ -11,8 +11,9 @@ export class ApiService {
   get(url:string){
     return this.http.get(API_URL+url);
   }
-  add(url:string, data:any){
-    return this.http.post(API_URL+url,data)
+  post(url:string, data:any ,  responseType:any = 'json'){
+ 
+    return this.http.post(API_URL+url , data , {responseType:responseType}) 
   }
   delete(url:string){
     return this.http.delete(API_URL+url);

@@ -4,6 +4,8 @@ import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminGuardService } from './admin.guard';
+import { AdminService } from './admin.service';
 
 const routes : Routes = [
   {
@@ -28,6 +30,10 @@ const routes : Routes = [
     CommonModule,
     SidebarModule,
     RouterModule.forChild(routes)
+  ],
+  providers:[
+AdminGuardService,
+AdminService
   ],
   bootstrap: [AdminComponent]
 })

@@ -1,1 +1,74 @@
-<p>auth works!</p>
+<div class="wrapper" id="wrapper">
+    <div class="title">
+        <h1>DevStudy</h1>
+    </div>
+ 
+    <div class="container">
+        <legend>{{title}}</legend>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="formGroup">
+                <div>
+                    user name
+                    <span style="color: red;"
+                    *ngIf="userName.hasError('required') 
+                     && (userName?.touched || userName?.dirty)">
+                     *
+                    </span> 
+
+                </div>
+                <input type="text" formControlName="userName">
+            </div>
+            <div *ngIf="isSignup" class="formGroup">
+                <div>
+                    email
+                    <span style="color: red;"
+                    *ngIf="email.hasError('required') 
+                     && (email?.touched || email?.dirty)">
+                     *
+                    </span> 
+                
+                </div>
+                <input type="email" formControlName="email">
+                <div style="color: red;"
+                *ngIf=" email.hasError('email')
+                 && (email?.touched || email?.dirty)">
+                <small>please enter valid email address</small> 
+            </div> 
+            </div>
+            <div class="formGroup">
+                <div>
+                    password
+                    <span style="color: red;"
+                    *ngIf="password.hasError('required') 
+                     && (password?.touched || password?.dirty)">
+                     *
+                    </span> 
+                </div>
+                <input type="password" formControlName="password">
+            </div>
+            <div *ngIf="isSignup" class="formGroup">
+                <div>
+                    confirm number
+                    <span style="color: red;"
+                    *ngIf="confirmPassword.hasError('required') 
+                     && (confirmPassword?.touched || confirmPassword?.dirty)">
+                     *
+                    </span> 
+                </div>
+                <input type="password" formControlName="confirmPassword">
+                <div style="color: red;"
+                *ngIf=" loginForm.hasError('mismatch')
+                 && (confirmPassword?.touched || confirmPassword?.dirty)">
+               <small> passwords must match </small>  
+            </div> 
+            </div>
+            <div>
+                <button type="submit">{{buttonName}}</button>
+            </div>
+            <span class="navText">
+                instead <a (click)="toggle()">{{navText}}?</a> 
+            </span>
+        </form>
+
+    </div>
+</div>
