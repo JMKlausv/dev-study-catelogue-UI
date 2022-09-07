@@ -1,0 +1,51 @@
+.title{
+    padding-top:0.5%;
+    padding-left:1%;
+}
+
+.form-group{
+    margin: 50px;
+    padding:20px;
+    border:1px solid gainsboro;
+   
+}
+.form-group-lable{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form-content{
+    border-top: none;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 10;
+   
+}
+input{
+    /* margin-top:15px; */
+    width: 80%!important;
+    padding: 5px;
+    border: 0.2px solid gray;
+   
+
+}
+input :active{
+    border: 0.2px solid gray; 
+}
+.error-text{
+    color: red;
+    padding-left: 20%;
+}
+
+.error{
+    border: 0.2px solid red;
+
+}
+.error-astrics{
+    color:red;
+}
+/* dropdown styles */
+.e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
+    content: '*';
+    color: red;
+}
+

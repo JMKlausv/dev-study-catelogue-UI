@@ -19,7 +19,8 @@ export class ApiService {
     return this.http.delete(API_URL+url);
   }
   edit(url:string, data:any){
-    return this.http.put(API_URL+url,data);
+
+    return this.http.put(API_URL+url+data.id,data);
   }
 
 }

@@ -1,0 +1,65 @@
+<div id="container">
+    <h4 class="title"> {{title}}</h4>
+    <form [formGroup]="frameworkForm" (ngSubmit)="submit()" novalidate>
+        <div class="form-group">
+            <label class="form-group-lable">Framework Information</label>
+            <div class="form-content">
+                <div class="input-name">
+                    <label >Framework Name</label>
+                    <span class="error-astrics"
+                    *ngIf="name.hasError('required') && (name.touched|| name.dirty)">
+                        *
+                    </span>
+                </div>
+                <div class="input">
+                     <input [ngClass]="{'error':name.hasError('required')&&(name.touched|| name.dirty)}"
+                      type="text" name="name" 
+                      formControlName="name">
+                      <small  class="error-text" 
+                      *ngIf="name.hasError('required')  && (name?.touched || name?.dirty)"> 
+                        framework name is required 
+                      </small>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Framework Type</label>
+                        <span class="error-astrics" 
+                        *ngIf="type.hasError('required')&&(type.touched|| type.dirty)">
+                            *
+                        </span>
+                    </div>
+                    <div class="input">
+                        <input [ngClass]="{'error':type.hasError('required')&&(type.touched|| type.dirty)}"
+                        type="text" name="type" formControlName="type">
+                        <small  class="error-text" 
+                        *ngIf="type.hasError('required') && (type?.touched || type?.dirty)">
+                            framework type is required
+                        </small>
+                    </div>
+                </div>
+                
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Language It Belonges To</label>
+                    </div>
+                    
+                    <div class="input">
+                         <ejs-dropdownlist 
+                         formControlName="languageId"
+                         id='ddlelement' #samples 
+                         [dataSource]='languages' 
+                         [fields]='fields' 
+                         placeholder="select language"
+                         [floatLabelType]="(languageId.hasError('required')&&(languageId.touched|| languageId.dirty))?'auto':'none'"
+                         ></ejs-dropdownlist>
+                    </div>
+                </div>
+                <app-save-cancel-button 
+                (cancel)="cancel()" 
+                [disabled]="frameworkForm.invalid">
+                </app-save-cancel-button>
+            </div>
+        </form>
+    </div>

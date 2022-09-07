@@ -5,14 +5,14 @@
 .form-group{
     margin: 50px;
 }
-.lable{
+/* .lable{
     font-size: medium;
     font-family: sans-serif;
     padding: 10px;
     border-top: 1px solid rgb(236, 236, 236);
     border-left:2px solid #e5cf0d;
     border-bottom: 1px solid rgb(236, 236, 236);
-}
+} */
 .form-content{
     padding:20px;
     border-top: none;
@@ -32,38 +32,6 @@ input{
 }
 input :active{
     border: 0.2px solid gray; 
-}
-.submit::before {
-    content: '\e735';
-}
-.cancel::before{
-    content: '\e7fc';
-}
-button{
-    font-size: large;
-}
-button:disabled{
-    opacity: 0.6;
-}
-.btn-group{
-    margin: 50px;
-
-}
-.btn-submit{
-  margin-right: 20px;
-    background-color: #3EA1EC;
-    color: white;
-    border: none;
-    padding:10px;
-}
-.btn-cancel{
-  
-    background-color: red;
-    color:white;
-    border: none;
-    padding: 10px;
-    padding-right: 15px;
-
 }
 .error-text{
     color: red;

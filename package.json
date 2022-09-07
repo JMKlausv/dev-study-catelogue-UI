@@ -20,7 +20,7 @@
     "@angular/router": "^14.0.0",
     "@auth0/angular-jwt": "^5.0.2",
     "@syncfusion/ej2-angular-buttons": "^20.2.45",
-    "@syncfusion/ej2-angular-dropdowns": "^20.2.45",
+    "@syncfusion/ej2-angular-dropdowns": "^20.2.48",
     "@syncfusion/ej2-angular-grids": "^20.2.45",
     "@syncfusion/ej2-angular-layouts": "^20.2.45",
     "@syncfusion/ej2-angular-navigations": "^20.2.45",

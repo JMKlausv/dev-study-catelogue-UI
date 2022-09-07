@@ -55,8 +55,6 @@ if(mode == "signup"){
   }
 
   checkAuthState(){
-    console.log("&&&&&&&&&&&&&&&&&&&&&&777")
-    console.log(this.cookieService.get("userId"));
     return this.cookieService.check('userId');
   }
   checkAdminPermission(){

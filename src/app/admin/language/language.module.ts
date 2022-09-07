@@ -6,8 +6,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { LanguageFormComponent } from './language-form/language-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogModule } from '@syncfusion/ej2-angular-popups';
-import { LanguageResolver } from './language.resolver';
-import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes = [
   {
@@ -34,8 +32,8 @@ const routes : Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    ReactiveFormsModule,
-    DialogModule,
+    // ReactiveFormsModule,
+    // DialogModule,
     RouterModule.forChild(routes)
   ]
 })

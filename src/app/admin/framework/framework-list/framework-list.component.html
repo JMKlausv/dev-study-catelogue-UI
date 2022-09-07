@@ -1,0 +1,10 @@
+<div id="container">
+    <app-grid
+     [data]="framework"
+     [columnData]="columnData"
+     (delete)="deleteFramework($event)"
+     (add)="addFramework()"
+     (edit)="editFramework($event)"
+    >
+    </app-grid>
+</div>

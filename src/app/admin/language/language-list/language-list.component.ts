@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { createSpinner, hideSpinner, showSpinner } from '@syncfusion/ej2-angular-popups';
 import { map } from 'rxjs';
+import { ColumnData } from 'src/app/models/columnData';
 import { Language } from 'src/app/models/language.interface';
 import { ApiService } from 'src/app/shared/api.service';
 
@@ -15,7 +16,7 @@ export class LanguageListComponent implements OnInit {
   constructor(private apiService:ApiService ,  private router:Router) { }
 
   data:Language[]=[];
-  columnData : {field:string,headerText:string}[]=[
+  columnData : ColumnData[]=[
     {field:'id', headerText: 'Language Id'},
     { field:'name', headerText: 'Language Name'}
   ]

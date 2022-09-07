@@ -18,12 +18,17 @@ const routes : Routes = [
    loadChildren: ()=>import('../admin/language/language.module').then(m=>m.LanguageModule)
 
   },
+  {
+    path: "framework",
+    loadChildren: ()=>import('../admin/framework/framework.module').then(m=>m.FrameworkModule)
+  }
 ]
 
 @NgModule({
   declarations: [
     AdminComponent,
-    DashboardComponent
+    DashboardComponent,
+
  
   ],
   imports: [
