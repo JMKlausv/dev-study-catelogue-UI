@@ -21,6 +21,7 @@ export class FrameworkFormComponent implements OnInit {
   languages:Language[]=[];
   fields:Object = {text:"name",value:"id"};
   frameworkForm:FormGroup= new FormGroup({
+    id: new FormControl(),///hidden///
     name:new FormControl('',[Validators.required]),
     type:new FormControl('',[Validators.required]),
     languageId:new FormControl('',[Validators.required])

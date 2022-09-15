@@ -1,0 +1,151 @@
+<div id="container">
+    <h4 class="title"> {{pageTitle}}</h4>
+    <form [formGroup]="courseForm" (ngSubmit)="submit()" novalidate>
+        <div class="form-group">
+            <label class="form-group-lable">Course Information</label>
+            <div class="form-content">
+                <div class="input-name">
+                    <label >Course Title</label>
+                    <span class="error-astrics"
+                    *ngIf="title.hasError('required') && (title.touched|| title.dirty)">
+                        *
+                    </span>
+                </div>
+                <div class="input">
+                     <input [ngClass]="{'error':title.hasError('required')&&(title.touched|| title.dirty)}"
+                      type="text" name="title" formControlName="title">
+                      <small  class="error-text" 
+                      *ngIf="title.hasError('required')  && (title?.touched || title?.dirty)"> 
+                        course title is required 
+                      </small>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Author Name</label>
+                        <span class="error-astrics" 
+                        *ngIf="authorName.hasError('required')&&(authorName.touched|| authorName.dirty)">
+                            *
+                        </span>
+                    </div>
+                    <div class="input">
+                        <input [ngClass]="{'error':authorName.hasError('required')&&(authorName.touched|| authorName.dirty)}"
+                        type="text" name="authorName" formControlName="authorName">
+                        <small  class="error-text" 
+                        *ngIf="authorName.hasError('required') && (authorName?.touched || authorName?.dirty)">
+                            Author name is required
+                        </small>
+                    </div>
+                </div>
+                                
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Image Url</label>
+                    </div>
+                    <div class="input">
+                        <input 
+                        type="text" name="imageUrl" formControlName="imageUrl">
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Link address of the  course</label>
+                        <span class="error-astrics" 
+                        *ngIf="contentLink.hasError('required')&&(contentLink.touched|| contentLink.dirty)">
+                            *
+                        </span>
+                    </div>
+                    <div class="input">
+                        <input [ngClass]="{'error':contentLink.hasError('required')&&(contentLink.touched|| contentLink.dirty)}"
+                        type="text" name="contentLink" formControlName="contentLink">
+                        <small  class="error-text" 
+                        *ngIf="contentLink.hasError('required') && (contentLink?.touched || contentLink?.dirty)">
+                            Link address is required
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Description</label>
+                    </div>
+                    <div class="input">
+                       <textarea name="description" id="description" formControlName="description" cols="100" rows="8"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Published Date</label>
+                    </div>
+                    <div class="input">
+                        <input  type="date" name="publishedDate" formControlName="publishedDate">
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Framework</label>
+                    </div>
+                    
+                    <div class="input">
+                         <ejs-dropdownlist 
+                         formControlName="frameworkId"
+                         [dataSource]='frameworks' 
+                         [fields]='fields' 
+                         placeholder="select framework"
+                         ></ejs-dropdownlist>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Difficulty</label>
+                    </div>
+                    
+                    <div class="input">
+                         <ejs-dropdownlist 
+                         formControlName="difficulty"
+                         [dataSource]='difficulties' 
+                         placeholder="select difficulty"
+                         ></ejs-dropdownlist>
+                    </div>
+                </div>
+                
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Platform</label>
+                    </div>
+                    
+                    <div class="input">
+                         <ejs-dropdownlist 
+                         formControlName="platformType"
+                         [dataSource]='platforms' 
+                         placeholder="select platformType"
+                         ></ejs-dropdownlist>
+                    </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-name">
+                        <label>Division</label>
+                    </div>
+                    
+                    <div class="input">
+                         <ejs-dropdownlist 
+                         formControlName="division"
+                         [dataSource]='divisions' 
+                         placeholder="select division"
+                         ></ejs-dropdownlist>
+                    </div>
+                </div>
+
+                <app-save-cancel-button 
+                (cancel)="cancel()" 
+                [disabled]="courseForm.invalid">
+                </app-save-cancel-button>
+            </div>
+        </form>
+    </div>

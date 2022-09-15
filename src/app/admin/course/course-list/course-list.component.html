@@ -1,0 +1,10 @@
+<div id="container">
+    <app-grid
+     [data]="courseData"
+     [columnData]="columnData"
+     (delete)="deleteCourse($event)"
+     (add)="addCourse()"
+     (edit)="editCourse($event)"
+    >
+    </app-grid>
+</div>

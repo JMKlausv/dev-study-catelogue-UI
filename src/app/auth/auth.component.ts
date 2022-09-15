@@ -4,9 +4,6 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { createSpinner, DialogUtility, hideSpinner, showSpinner } from '@syncfusion/ej2-angular-popups';
 import { CookieService } from 'ngx-cookie-service';
-import { map } from 'rxjs';
-import { User } from '../models/user.interface';
-import { ApiService } from '../shared/api.service';
 import { CustomeValidators } from '../shared/CustomeValidators';
 import { AuthService } from './auth.service';
  const enum authMode  {login ,signup};
@@ -71,6 +68,7 @@ export class AuthComponent implements OnInit {
         this.authService.authenticate(user,mode).subscribe(
         {
           next:res=>{
+           
             hideSpinner(document.getElementById('wrapper')!);
             if(this.isSignup){
               this.toggle();

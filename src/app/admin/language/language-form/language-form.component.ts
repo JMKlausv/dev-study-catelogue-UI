@@ -16,6 +16,7 @@ export class LanguageFormComponent implements OnInit {
   public title!:String;
   loading: boolean = false;
   form1 : FormGroup= new FormGroup({
+    id:new FormControl(''),
     name :new FormControl('',[Validators.required])
   });
   constructor(private apiService:ApiService , private router: Router ) {
@@ -30,7 +31,7 @@ get name() : FormControl{
    
     if(this.language){
       this.form1.patchValue(this.language);
-      this.title = "Updage Language";
+      this.title = "Update Language";
     }else{
       this.title = "Add New Language "
     }
@@ -43,8 +44,7 @@ get name() : FormControl{
    this.loading = true;
    this._showSpinner();
    var command : Observable<Object>;
-   if(this.title == "Updage Language"){
-
+   if(this.title == "Update Language"){
     command = this.apiService.edit('Language/', this.form1.value);
    }else{
 command = this.apiService.post('Language/', this.form1.value)

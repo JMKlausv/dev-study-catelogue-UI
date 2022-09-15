@@ -49,7 +49,7 @@ this.add.emit(event);
 onEdit(event:any){
   var index :number[]= this.grid.getSelectedRowIndexes();
   if(index.length == 0){
-    alert("please select an item to delete");
+    alert("please select an item to Edit");
   }else{
     
     this.edit.emit(this.selectedRowData);

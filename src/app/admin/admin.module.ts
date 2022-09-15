@@ -21,7 +21,12 @@ const routes : Routes = [
   {
     path: "framework",
     loadChildren: ()=>import('../admin/framework/framework.module').then(m=>m.FrameworkModule)
-  }
+  },
+  {
+    path: "course",
+   loadChildren: ()=>import('../admin/course/course.module').then(m=>m.CourseModule)
+
+  },
 ]
 
 @NgModule({

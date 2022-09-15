@@ -11,8 +11,6 @@ constructor() {
 }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
        var token:string = localStorage.getItem("auth_token")??"";
-       console.log("tokennnnnnnnnnnnnnnnnnnnn")
-       console.log(token);
        req= req.clone({ headers:req.headers.set("Authorization",'Bearer '+token)});
        return next.handle(req);
     }
