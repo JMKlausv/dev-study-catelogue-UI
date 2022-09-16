@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<div class="wrapper">
+
+    <div  class="card-group1">
+        <div tabindex="0" class="e-card e-card-horizontal">
+           <div class="e-card-header">All  Courses</div>
+            <div class="e-card-content">{{allCourseCount}}</div>
+        </div>
+        <div tabindex="0" class="e-card e-card-horizontal">
+            <div class="e-card-header">User suggested courses</div>
+             <div class="e-card-content">{{userCourseCount}}</div>
+         </div>
+    </div>
+    <div class="e-card grid-card">
+
+        <app-dashboard-grid
+        title="Highest Rated Courses"
+        [columnData]="columnData"
+        [courseData]="adminCourseData"
+        (filterChange)="onFilterChange($event,true)"
+        >
+        </app-dashboard-grid>
+    </div>
+    <div class="e-card grid-card">
+        <app-dashboard-grid
+        title="Highest Rated User Suggested Courses"
+        [columnData]="columnData"
+        [courseData]="uesrCourseData"
+        [isUserCourse]="true"
+        (edit)="onUserCourseEdit($event)"
+        (filterChange)="onFilterChange($event,false)"
+        >
+        </app-dashboard-grid>
+
+    </div>
+</div>

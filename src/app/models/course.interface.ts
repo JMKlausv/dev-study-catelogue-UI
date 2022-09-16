@@ -5,6 +5,7 @@ export interface Course{
     imageUrl?:string;
     contentLink:string;
     publishedDate:Date;
+    frameworkId?:number;
     framework:{id:number,name:String};
     difficulty:string;
     platformType:string;

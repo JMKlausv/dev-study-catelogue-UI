@@ -1,0 +1,51 @@
+.wrapper{
+    background-color: rgb(240, 240, 240);
+    padding:0 10px;
+}
+.card-group1{
+    display:flex;
+    padding: 10px;
+}
+
+.e-card .e-card-content {
+    font-size: 20px;
+    color: gray;
+    line-height: initial;
+    font-weight: normal;
+}
+.e-card-horizontal{
+    color: gray;
+    line-height: initial;
+    font-weight: normal;
+    width: 30%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.e-card .e-card-header {
+    color: #3EA1EC;
+    font-size: 15px;
+}
+/* dropdown styles */
+
+#dropdown{
+    width: fit-content;
+}
+.e-ddl.e-input-group.e-control-wrapper .e-input {
+    font-size: 15px;
+    font-family: sans-serif;
+    /* width: 460px; */
+   padding-left: 15px;
+    background: white;
+}
+.e-ddl.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddl.e-input-group.e-control-wrapper.e-input-focus::after {
+    background: #d2b7ff;
+}
+/* -------- */
+.grid-title{
+    display: flex;
+    justify-content: space-around;
+}
+.grid-card{
+    margin-top:20px;
+}

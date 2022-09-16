@@ -1506,6 +1506,19 @@
     rxjs-compat "^6.5.4"
     zone.js "^0.10.2"
 
+"@syncfusion/ej2-angular-base@~20.2.46":
+  version "20.2.49"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-base/-/ej2-angular-base-20.2.49.tgz#03d539eea59a0e66f6829ac9fa9459c2f51686e0"
+  integrity sha512-CXiJQ6vxs6IVu8VY7tTaAi0Gr1a30RN6q/Pn6qD4lSXOPCcTduB2eB9P0h5FBl+ERuCxHbHsuHHQ/JgNPq/1uQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~20.2.48"
+    "@syncfusion/ej2-icons" "~20.2.45"
+    core-js "^3.4.8"
+    reflect-metadata "^0.1.9"
+    rxjs "^6.5.4"
+    rxjs-compat "^6.5.4"
+    zone.js "^0.10.2"
+
 "@syncfusion/ej2-angular-base@~20.2.48":
   version "20.2.48"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-base/-/ej2-angular-base-20.2.48.tgz#eac0b8ee52ec558e4e613c7775009884376829ac"
@@ -1549,15 +1562,14 @@
     "@syncfusion/ej2-grids" "20.2.45"
     tslib "^2.3.0"
 
-"@syncfusion/ej2-angular-layouts@^20.2.45":
-  version "20.2.45"
-  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-layouts/-/ej2-angular-layouts-20.2.45.tgz#d68b7599cf7def6f51b52e903c53b6417146f9b0"
-  integrity sha512-00K6LNIY0rYCgqFpEKNfefVvEECpnLkvjSXLpmNoRgeOQGbcQelPg+EoqIom/BtnWLs0jg98eNCL+2exSjNIZg==
+"@syncfusion/ej2-angular-layouts@^20.2.46-ngcc":
+  version "20.2.46-ngcc"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-layouts/-/ej2-angular-layouts-20.2.46-ngcc.tgz#f9989289e4f6452b51f497d097c66fed9e0f1fa5"
+  integrity sha512-QmIdbu5HEx5iBQg+nJq/K5Gj0AGqIx4QVj0YHSyRTLyeZNv5T9VYRGNkPnK3+QCyHr28yxbKRmUXCblJENuJrw==
   dependencies:
-    "@syncfusion/ej2-angular-base" "~20.2.45"
-    "@syncfusion/ej2-base" "~20.2.45"
-    "@syncfusion/ej2-layouts" "20.2.45"
-    tslib "^2.3.0"
+    "@syncfusion/ej2-angular-base" "~20.2.46"
+    "@syncfusion/ej2-base" "~20.2.46"
+    "@syncfusion/ej2-layouts" "20.2.46"
 
 "@syncfusion/ej2-angular-navigations@^20.2.45":
   version "20.2.45"
@@ -1714,12 +1726,12 @@
     "@syncfusion/ej2-popups" "~20.2.45"
     "@syncfusion/ej2-splitbuttons" "~20.2.45"
 
-"@syncfusion/ej2-layouts@20.2.45":
-  version "20.2.45"
-  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-layouts/-/ej2-layouts-20.2.45.tgz#074458f2f55640ebc6737219f427d0183dd1cb62"
-  integrity sha512-nT+gfeXnXR58ae3d9XSvEvCOxgmDJHDbR2y0kwrBiI2FyuC0Uye9jEQ4SgV8aV0QlGhZ79xNOu9P984j7Z2RMg==
+"@syncfusion/ej2-layouts@20.2.46":
+  version "20.2.46"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-layouts/-/ej2-layouts-20.2.46.tgz#67ee5691906f92b09d3eff6801f84f3b39f28d4d"
+  integrity sha512-IVymncm4HQ1xSm5f1ynaBLV9JEffrmR6B9vY5PFtAfOjlXOTF1XEf67OlO3giujM/dOhjodBY1pSqjPdsd6V8g==
   dependencies:
-    "@syncfusion/ej2-base" "~20.2.45"
+    "@syncfusion/ej2-base" "~20.2.46"
 
 "@syncfusion/ej2-lists@~20.2.45":
   version "20.2.45"

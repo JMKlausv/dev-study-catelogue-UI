@@ -6,6 +6,10 @@ import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminGuardService } from './admin.guard';
 import { AdminService } from './admin.service';
+import { SharedModule } from '../shared/shared.module';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { CommandColumnService, EditService, GridModule } from '@syncfusion/ej2-angular-grids';
+import { DashboardGridComponent } from './dashboard/dashboard-grid/dashboard-grid.component';
 
 const routes : Routes = [
   {
@@ -33,17 +37,24 @@ const routes : Routes = [
   declarations: [
     AdminComponent,
     DashboardComponent,
+    DashboardGridComponent,
 
  
   ],
   imports: [
     CommonModule,
     SidebarModule,
+    SharedModule,
+    GridModule,
+    DropDownListModule,
     RouterModule.forChild(routes)
   ],
   providers:[
 AdminGuardService,
-AdminService
+AdminService,
+EditService, 
+CommandColumnService
+
   ],
   bootstrap: [AdminComponent]
 })
