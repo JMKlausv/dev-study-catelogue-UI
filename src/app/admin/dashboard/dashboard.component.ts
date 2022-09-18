@@ -41,7 +41,7 @@ onAdminCourseEdit(event:any){
 
 }
 onUserCourseEdit(course:Course){
-  if(window.confirm("Are You sure you want to approve upgrading the course to lower division? ")){
+  if(window.confirm("Are You sure you want to approve upgrading the course from user division to lower division? ")){
      course.frameworkId = course.framework.id;
      course.division = "lower";
      showSpinner(document.getElementById("wrapper")!);
@@ -59,12 +59,13 @@ onUserCourseEdit(course:Course){
   }
 }
 
+
   private _fetchAdminCourses(frameworkId?:number){
     var query;
     if(frameworkId!=null){
-       query = "Course?uploadedBy=admin?filter=high?frameworkId=frameworkId";
+       query = `Course?frameworkId=${frameworkId}&UploadedByUser=false&maxCount=3`;
     }else{
-      query = "Course?uploadedBy=admin?filter=high";
+      query = "Course?UploadedByUser=false&maxCount=3";
     }
   
     this.apiService.get(query).subscribe({
@@ -79,9 +80,9 @@ onUserCourseEdit(course:Course){
   private _fetchUserCourses(frameworkId?:number){
     var query;
     if(frameworkId!=null){
-      query = "Course?UploadedBy=user?filter=high?frameworkId=frameworkId"
+      query = `Course?frameworkId=${frameworkId}&userDivision=true&maxCount=3`;
     }else{
-      query = "Course?uploadedBy=user?filter=high";
+      query = "Course?userDivision=true&maxCount=3";
     }
    
     this.apiService.get(query).subscribe({
@@ -93,7 +94,10 @@ onUserCourseEdit(course:Course){
       }
     })
   }
-  onFilterChange(frameworkId:number,isAdmin:boolean){
+  onFilterChange(args:any,isAdmin:boolean){
+    console.log("this is filter change.......");
+    var frameworkId:number = args.itemData.id;
+    console.log(frameworkId);
     if(isAdmin){
       this._fetchAdminCourses(frameworkId);
     }else{
@@ -111,7 +115,7 @@ this.apiService.get("Course/count").subscribe({
 })
   }
  private _getUserCourseCount(){
-    this.apiService.get("Course/count").subscribe({
+    this.apiService.get("Course/count?userDivision=true").subscribe({
       next:res=>{
       this.userCourseCount = res as number;
       },

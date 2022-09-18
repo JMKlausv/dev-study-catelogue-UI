@@ -36,7 +36,7 @@ export class CourseFormComponent implements OnInit {
     frameworkId : new FormControl('', [Validators.required]),
     difficulty : new FormControl('', [Validators.required]),
     platformType : new FormControl('', [Validators.required]),
-    division : new FormControl('', [Validators.required]),
+    division : new FormControl('user division', [Validators.required]),
     id: new FormControl(),//// hidden value ////
     uploadedBy: new FormControl(this.currentUserId, [Validators.required])/// hiddedn value////////
   });
