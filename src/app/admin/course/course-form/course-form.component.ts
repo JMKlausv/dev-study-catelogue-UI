@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastUtility } from '@syncfusion/ej2-angular-notifications';
 import { DialogUtility, hideSpinner, showSpinner } from '@syncfusion/ej2-angular-popups';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
@@ -92,6 +93,7 @@ export class CourseFormComponent implements OnInit {
      command.subscribe({
         next:res=>{
           hideSpinner(document.getElementById("container")!);
+          ToastUtility.show('the course has been aded successfully', 'Success', 2000).position.X='center';        
           this.router.navigate(['admin/course']);
         },
         error:error=>{
