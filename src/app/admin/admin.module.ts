@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 import { CommandColumnService, EditService, GridModule } from '@syncfusion/ej2-angular-grids';
 import { DashboardGridComponent } from './dashboard/dashboard-grid/dashboard-grid.component';
+import { ToastModule } from '@syncfusion/ej2-angular-notifications';
+import { UserCoursesComponent } from './user-courses/user-courses.component';
 
 const routes : Routes = [
   {
@@ -38,6 +40,7 @@ const routes : Routes = [
     AdminComponent,
     DashboardComponent,
     DashboardGridComponent,
+    UserCoursesComponent,
 
  
   ],
@@ -45,6 +48,7 @@ const routes : Routes = [
     CommonModule,
     SidebarModule,
     SharedModule,
+    ToastModule,
     GridModule,
     DropDownListModule,
     RouterModule.forChild(routes)

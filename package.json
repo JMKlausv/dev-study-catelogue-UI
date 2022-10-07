@@ -24,6 +24,7 @@
     "@syncfusion/ej2-angular-grids": "^20.2.45",
     "@syncfusion/ej2-angular-layouts": "^20.2.46-ngcc",
     "@syncfusion/ej2-angular-navigations": "^20.2.45",
+    "@syncfusion/ej2-angular-notifications": "^20.2.45",
     "@syncfusion/ej2-angular-popups": "^20.2.45",
     "bootstrap": "^5.2.0",
     "ngx-bootstrap": "^9.0.0",

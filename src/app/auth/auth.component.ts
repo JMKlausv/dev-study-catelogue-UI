@@ -78,7 +78,7 @@ export class AuthComponent implements OnInit {
               if(role == "admin"){
                 this.router.navigate(["/admin/dashboard"])
               }else{
-                this.router.navigate(["/user"])
+                this.router.navigate(["/user/home"])
               }
             }
             

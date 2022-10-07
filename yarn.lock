@@ -1581,6 +1581,16 @@
     "@syncfusion/ej2-navigations" "20.2.45"
     tslib "^2.3.0"
 
+"@syncfusion/ej2-angular-notifications@^20.2.45":
+  version "20.2.45"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-notifications/-/ej2-angular-notifications-20.2.45.tgz#824c3a7f082f09365aed3f77fb027bcfc55dc156"
+  integrity sha512-jTCYE7IpLdph8ikXihY96CrSWakugwvqpDBRsWi14sMxx+m+PzVgkZr6sq676yndE4O2naz8HkK+Z6Jxs3iYig==
+  dependencies:
+    "@syncfusion/ej2-angular-base" "~20.2.45"
+    "@syncfusion/ej2-base" "~20.2.45"
+    "@syncfusion/ej2-notifications" "20.2.45"
+    tslib "^2.3.0"
+
 "@syncfusion/ej2-angular-popups@^20.2.45":
   version "20.2.45"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-angular-popups/-/ej2-angular-popups-20.2.45.tgz#6da7fe4771600ac20ae1d39eb160015160406e6e"
@@ -1773,6 +1783,15 @@
     "@syncfusion/ej2-data" "~20.2.45"
     "@syncfusion/ej2-inputs" "~20.2.48"
     "@syncfusion/ej2-lists" "~20.2.46"
+    "@syncfusion/ej2-popups" "~20.2.45"
+
+"@syncfusion/ej2-notifications@20.2.45":
+  version "20.2.45"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-notifications/-/ej2-notifications-20.2.45.tgz#3e229d53e109072ad6d681c83cfeb1f9eb1b12db"
+  integrity sha512-uOBp5mBDtrRr/ZGF9XpfBduBhp5b4IF3Z3bGXaGrAgASfJuLkisGqk9sVdEphAnFMmOh4XcD3sdL4h/ZZwtdPg==
+  dependencies:
+    "@syncfusion/ej2-base" "~20.2.45"
+    "@syncfusion/ej2-buttons" "~20.2.45"
     "@syncfusion/ej2-popups" "~20.2.45"
 
 "@syncfusion/ej2-pdf-export@~20.2.45":

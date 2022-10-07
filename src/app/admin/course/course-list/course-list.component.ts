@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastUtility } from '@syncfusion/ej2-angular-notifications';
 import { createSpinner, hideSpinner, showSpinner } from '@syncfusion/ej2-angular-popups';
 import { ColumnData } from 'src/app/models/columnData';
 import { Course } from 'src/app/models/course.interface';
@@ -57,11 +58,13 @@ export class CourseListComponent implements OnInit {
       this.apiService.delete("Course/"+id).subscribe({
         next:res=>{
           hideSpinner(document.getElementById("container")!);
+          ToastUtility.show('the course has been deleted successfully', 'Success', 2000).position.X='center';
           this.ngOnInit();    
         },
         error:error=>{
           console.log(error.message)
           hideSpinner(document.getElementById('container')!);
+          ToastUtility.show('something went wrong', 'Error', 2000);
         }
        })
     }

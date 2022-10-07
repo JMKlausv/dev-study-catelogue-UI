@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppHttpInterceptor } from './AppHttpInterceptor.service';
 import { AuthGuardService } from './auth/auth.guard';
 import { SharedModule } from './shared/shared.module';
+import { UserComponent } from './user/user.component';
 
 const routes : Routes=[
   {
@@ -28,6 +29,7 @@ const routes : Routes=[
   },
   {
     path:"user",
+    component: UserComponent,
     loadChildren: ()=>import("../app/user/user.module").then(m=>m.UserModule),
     canLoad:[AuthGuardService]
   }
