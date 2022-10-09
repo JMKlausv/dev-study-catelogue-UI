@@ -3,4 +3,6 @@ export interface User{
     email:string;
     userName:string;
     role:string;
+    likedCourses:number[];
+    dislikedCourses:number[];
 }
