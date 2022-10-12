@@ -22,5 +22,8 @@ export class ApiService {
 
     return this.http.put(API_URL+url+data.id,data);
   }
+  patch(url:string, jsonPatchData : any){
+    return this.http.patch(API_URL+url, jsonPatchData);
+  }
 
 }

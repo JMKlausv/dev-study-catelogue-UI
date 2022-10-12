@@ -13,4 +13,5 @@ export interface Course{
     downvoteCount:number;
     uploadedBy:string;
     division:string;
+    createdAt?:Date;
 }
